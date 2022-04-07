@@ -15,6 +15,11 @@ pipeline {
                     url: "http://54.205.236.32:8082/",
                     credentialsId: "jfrog"
                 )
+                rtNpmResolver (
+                    id: "NPM_RESOLVER",
+                    serverId: "artifactory-server-id",
+                    repo: "nexus"
+                )
 
                 
                 rtNpmDeployer (
@@ -30,7 +35,7 @@ pipeline {
                 rtNpmInstall (
                     tool: "nodejs-17.8.0", // Tool name from Jenkins configuration
                     path: "npm-example",
-                    deployerId: "NPM_DEPLOYER"
+                    deployerId: "NPM_RESOLVER"
                     
                 )
             }
