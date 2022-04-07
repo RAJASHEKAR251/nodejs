@@ -35,7 +35,7 @@ pipeline {
                 rtNpmInstall (
                     tool: "nodejs-17.8.0", // Tool name from Jenkins configuration
                     path: "npm-example",
-                    deployerId: "NPM_RESOLVER"
+                    resolverId: "NPM_RESOLVER"
                     
                 )
             }
