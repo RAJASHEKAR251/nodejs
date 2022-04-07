@@ -18,7 +18,7 @@ pipeline {
                 rtNpmResolver (
                     id: "NPM_RESOLVER",
                     serverId: "artifactory-server-id",
-                    repo: "nexus"
+                    repo: "nodejs"
                 )
 
                 
