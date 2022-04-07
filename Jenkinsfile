@@ -34,7 +34,7 @@ pipeline {
             steps {
                 rtNpmInstall (
                     tool: "nodejs-17.8.0", // Tool name from Jenkins configuration
-                    path: "npm-example",
+                    path: "root",
                     resolverId: "NPM_RESOLVER"
                     
                 )
@@ -45,7 +45,7 @@ pipeline {
             steps {
                 rtNpmPublish (
                     tool: "nodejs-17.8.0", // Tool name from Jenkins configuration
-                    path: "npm-example",
+                    path: "root",
                     deployerId: "NPM_DEPLOYER"
                 )
             }
