@@ -36,6 +36,9 @@ pipeline {
                     tool: "nodejs-17.8.0", // Tool name from Jenkins configuration
                    
                     deployerId: "NPM_DEPLOYER"
+                    )
+            }
+      }
        
 
         stage ('Publish build info') {
