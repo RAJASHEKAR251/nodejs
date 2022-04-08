@@ -12,7 +12,7 @@ pipeline {
             steps {
                 rtServer (
                     id: "artifactory-server-id",
-                    url: "http://54.205.236.32:8082/artifactory",
+                    url: "http://44.202.89.38:8082/artifactory",
                     credentialsId: "jfrog"
                 )
                 rtNpmResolver (
