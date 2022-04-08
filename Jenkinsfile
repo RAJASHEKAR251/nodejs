@@ -30,17 +30,12 @@ pipeline {
             }
         }
         
-         stage ('Exec npm install') {
+      stage ('Exec npm publish') {
             steps {
-                rtNpmInstall (
+                rtNpmPublish (
                     tool: "nodejs-17.8.0", // Tool name from Jenkins configuration
-                    
-                    resolverId: "NPM_RESOLVER"
-                    
-                )
-            }
-        }
-      
+                   
+                    deployerId: "NPM_DEPLOYER"
        
 
         stage ('Publish build info') {
